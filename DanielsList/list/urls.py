@@ -12,8 +12,14 @@ router.register(r'groups', GroupViewSet)
 
 ring_list = RingViewSet.as_view({
     'get':'list',
-    'post':'create'
+    'get':'retrieve',
+    'post':'create',
+    "put":"update",
+    "patch":"partial_update",
+    "delete":"destroy"
 })
+
+
 
 
 urlpatterns = [
